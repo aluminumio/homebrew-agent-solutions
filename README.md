@@ -10,10 +10,12 @@ brew install aluminumio/agent-solutions/agent-solutions
 
 ## Usage
 
-After installing, launch **Agent Solutions** from your Applications folder. It runs as a menu bar app — click the icon to open the dashboard.
+After installing, launch **Agent Solutions** from your Applications folder. It runs as a menu bar app.
 
-Set the proxy URL in your shell:
+To route traffic through the proxy, either:
 
-```
-export ANTHROPIC_BASE_URL=http://localhost:19080
-```
+- **Enable globally**: Open the menu bar panel → Settings → toggle "Enforce proxy system-wide"
+- **Per-session**: Copy the launch command from the menu bar panel footer, or run:
+  ```
+  ANTHROPIC_BASE_URL=http://localhost:19080 claude
+  ```
