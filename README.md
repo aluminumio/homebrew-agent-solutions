@@ -17,5 +17,5 @@ To route traffic through the proxy, either:
 - **Enable globally**: Open the menu bar panel → Settings → toggle "Enforce proxy system-wide"
 - **Per-session**: Copy the launch command from the menu bar panel footer, or run:
   ```
-  ANTHROPIC_BASE_URL=http://localhost:19080 claude
+  ANTHROPIC_BASE_URL=http://localhost:10240 claude
   ```
