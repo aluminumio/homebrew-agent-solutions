@@ -9,9 +9,6 @@ on:
       sha256_arm64:
         description: "SHA256 of the arm64 DMG"
         required: true
-      sha256_x86_64:
-        description: "SHA256 of the x86_64 DMG"
-        required: true
 
 jobs:
   update:
@@ -23,8 +20,7 @@ jobs:
         run: |
           CASK="Casks/agent-solutions.rb"
           sed -i "s/version \".*\"/version \"${{ inputs.version }}\"/" "$CASK"
-          sed -i "s/arm:   \"[a-fA-Z0-9]*\"/arm:   \"${{ inputs.sha256_arm64 }}\"/" "$CASK"
-          sed -i "s/intel: \"[a-fA-Z0-9]*\"/intel: \"${{ inputs.sha256_x86_64 }}\"/" "$CASK"
+          sed -i "s/sha256 \"[a-fA-Z0-9]*\"/sha256 \"${{ inputs.sha256_arm64 }}\"/" "$CASK"
 
       - name: Commit and push
         run: |

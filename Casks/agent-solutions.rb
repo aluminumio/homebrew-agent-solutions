@@ -1,14 +1,14 @@
 cask "agent-solutions" do
-  arch arm: "arm64", intel: "x86_64"
-  version "1.0.0"
-  sha256 arm:   "PLACEHOLDER",
-         intel: "PLACEHOLDER"
+  version "0.1.1"
+  sha256 "PLACEHOLDER"
 
-  url "https://github.com/aluminumio/homebrew-agent-solutions/releases/download/v#{version}/AgentSolutions-#{version}-#{arch}.dmg",
+  url "https://github.com/aluminumio/homebrew-agent-solutions/releases/download/v#{version}/AgentSolutions-#{version}-arm64.dmg",
       verified: "github.com/aluminumio/homebrew-agent-solutions/"
   name "Agent Solutions"
   desc "Anthropic API proxy with pinnable menu bar panel"
-  homepage "https://github.com/aluminumio/agent-solutions"
+  homepage "https://github.com/aluminumio/homebrew-agent-solutions"
+
+  depends_on arch: :arm64
 
   livecheck do
     url :url
