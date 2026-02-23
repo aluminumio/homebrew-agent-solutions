@@ -1,6 +1,6 @@
 cask "agent-solutions" do
-  version "0.1.11"
-  sha256 "132dcb5e19dbad45fed67e72eb1be8095ecd830d2018ac3fbc53164d2b263073"
+  version "0.1.12"
+  sha256 "343b6c8b7632097af0f0f3ececada65cf70e97b7a4d33093ebcd306095ab3903"
 
   url "https://github.com/aluminumio/homebrew-agent-solutions/releases/download/v#{version}/AgentSolutions-#{version}-arm64.dmg",
       verified: "github.com/aluminumio/homebrew-agent-solutions/"
